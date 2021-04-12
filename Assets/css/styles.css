@@ -71,4 +71,7 @@ footer {
     margin: 5px;
     background-color: #fff;
     border-radius: 25px;
+    border-color: navy;
+    border-style: solid;
+    border-width: 15px;
 }
