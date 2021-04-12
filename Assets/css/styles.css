@@ -1,0 +1,34 @@
+html {
+
+}
+
+h2 {
+    text-align: center;
+}
+
+body {
+    background-color: #999;
+    align-content: center;
+    margin: 0px;
+}
+
+header {
+    background-color: navy;
+    color: #fff;
+    margin: 0px;
+    padding: 10px 5px;
+}
+
+footer {
+    background-color: navy;
+    color: #fff;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card {
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+}
