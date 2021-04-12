@@ -6,6 +6,11 @@ h2 {
     text-align: center;
 }
 
+.instructions {
+    text-align: center;
+    color: #fff;
+}
+
 body {
     background-color: #999;
     align-content: center;
@@ -16,7 +21,25 @@ header {
     background-color: navy;
     color: #fff;
     margin: 0px;
-    padding: 10px 5px;
+    padding: 10px 20px 20px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+#title {
+    
+}
+
+#timer {
+
+}
+
+main {
+    padding: 100px 20px 20px 20px;
 }
 
 footer {
@@ -31,4 +54,5 @@ footer {
     padding: 10px;
     margin: 5px;
     background-color: #fff;
+    border-radius: 25px;
 }
