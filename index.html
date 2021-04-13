@@ -25,76 +25,41 @@
         <div id="instructions">
             <h2 class="instructions">Instructions</h2>
             <p class="instructions">The instructions for this quiz will go here. This section will tell users how to interact with the gui and explain the scoring process, etc so this is some sample text so we can see what it will look like when it is all said and done.</p>
-        <input type="button" value="START QUIZ" id="startTimer">
+        <input type="button" value="START QUIZ" id="startTimer" />
         </div>
     </section>
 
         <!--question section-->
     <section id="quizBlock">
-        <div id="question" class="card">
-            <h2>Question #</h2>
-            <p><strong>Is this the section where the questions will be asked?</strong></p>
+        <div id="questionBox" class="card">
+            <div id="questionNumber"><h2>Question #</h2></div>
+            <div id="questionText"><p><strong>Is this the section where the questions will be asked?</strong></p></div>
         
         <div id="answers">
-            <div id="answer1" class="answer-button flex">A. This is the first answer.</div>
-            <div id="answer2" class="answer-button flex">B. Answer the second.</div>
-            <div id="answer3" class="answer-button flex">C. This is where the third one goes.</div>
-            <div id="answer4" class="answer-button flex">D. Last, but not least!</div>
+            <input type="button" id="answer1" class="answer-button" value="A. This is the first answer." /></input>
+            <input type="button" id="answer2" class="answer-button" value="B. Answer the second." /></input>
+            <input type="button" id="answer3" class="answer-button" value="C. This is where the third one goes."/></input>
+            <input type="button" id="answer4" class="answer-button" value="D. Last, but not least!"/></input>
         </div>
         </div>
     </section>
 
     <!--score section-->
     <section id="scoreBlock">
-        <div id="score" class="card">
+        <div id="scoreCard" class="card">
             <h2>Your Score</h2>
-            <p class="score">XYZ</p>
+            <p class="score" id="score">XYZ</p>
             <h3>Save Your Score</h3>
             <p>Enter your initials and save your score!</p>
             <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
             <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
             <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
-            <input type="button" value="SAVE" class="save-button" />            
+            <input type="button" value="SAVE" class="save-button" id="save" />            
         </div>
         <div id="highscore" class="card">
             <h2>Hall of Fame</h2>
+            <p>The Hall of Fame is empty! Take the quiz and fill it up.</p>
             <table id="hall-of-fame" class="hall-of-fame">
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
                 <tr>
                     <td>ABC</td>
                     <td>123</td>
