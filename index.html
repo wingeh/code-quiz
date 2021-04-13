@@ -24,7 +24,7 @@
     <section>
         <div id="instructions">
             <h2 class="instructions">Instructions</h2>
-            <p class="instructions">The instructions for this quiz will go here. This section will tell users how to interact with the gui and explain the scoring process, etc so this is some sample text so we can see what it will look like when it is all said and done.</p>
+            <p class="instructions">Test your Javascript knowledge with this handy quiz!</p>
         <input type="button" value="START QUIZ" id="startTimer" class="instructions"/>
         </div>
     </section>
@@ -51,21 +51,17 @@
             <p class="score" id="score">XYZ</p>
             <h3>Save Your Score</h3>
             <p>Enter your initials and save your score!</p>
-            <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
-            <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
-            <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
+            <input class="initials inputs" type="text" maxlength="1" placeholder="A" id="initials1" />
+            <input class="initials inputs" type="text" maxlength="1" placeholder="A" id="initials2" />
+            <input class="initials inputs" type="text" maxlength="1" placeholder="A" id="initials3" />
             <input type="button" value="SAVE YOUR SCORE" class="save-button" id="saveScore" />
             <input type="button" value="TRY AGAIN" id="reset" />            
         </div>
         <div id="highscore" class="card">
             <h2>Hall of Fame</h2>
-            <p>The Hall of Fame is empty! Take the quiz and fill it up.</p>
-            <table id="hall-of-fame" class="hall-of-fame">
-                <tr>
-                    <td>ABC</td>
-                    <td>123</td>
-                </tr>
-            </table>
+            
+<section id="hall-of-fame"></section>
+<input type="button" value="RESET HIGH SCORES" id="clearStorage" />   
         </div>
     </section>
     </main>

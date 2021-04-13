@@ -165,26 +165,37 @@ function restartQuiz () {
 var saveScore = document.getElementById("saveScore");
 saveScore.addEventListener("click", saveScoreFunction);
 
+var hallOfFame = document.getElementById('hall-of-fame')
+
 function saveScoreFunction (event) {
+document.getElementById("saveScore").disabled = true;
   //event.stopPropagation()
 
   var savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
     
     var savedDataObject = {
-        initials: initials.value,
+        initials: initials1.value + initials2.value + initials3.value,
         score: winCount,
     };
 
     savedScores.push(savedDataObject);
     console.log(savedScores);
     
-    
     localStorage.setItem("savedScores", JSON.stringify(savedScores));
 
     savedScores.forEach(element => {
         liEl = document.createElement("li");
         liEl.textContent = "Initials: " + element.initials + "   ||   Score: " + element.score;
-        leaderboard.appendChild(liEl);
+        hallOfFame.appendChild(liEl);
     });
 
+  };
+
+  // Remove all data
+  var clearStorage = document.getElementById("clearStorage")
+  clearStorage.addEventListener("click", clearLocalStorage)
+
+  function clearLocalStorage () {
+localStorage.clear();
+location.reload();
   };
