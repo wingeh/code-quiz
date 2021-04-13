@@ -11,6 +11,10 @@ $(".inputs").keyup(function () {
       $(this).next('.inputs').focus();
     }
 });
+// Quiz Function -------------------------------------------------------------------
+function startQuiz () {
+  document.getElementById("quizBlock").style.display = "block";
+};
 
 // Timer Function ------------------------------------------------------------------
 
@@ -26,7 +30,7 @@ var timeLeft = 30; // starting time in seconds
     
     
 function timer() {  
-  
+  startQuiz();
   var timerInterval = setInterval(function(){
     
     document.getElementById('timerBlock').style.display = "block"; //display timer
