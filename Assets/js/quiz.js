@@ -1,19 +1,32 @@
 //universal variables
 var highScore;
 var questionCount;
-// Event Listeners
 
 
 
-// Jump to next input box when first initial is added.
+
+// Jump to next input box when first initial is added ------------------------------
 $(".inputs").keyup(function () {
     if (this.value.length == this.maxLength) {
       $(this).next('.inputs').focus();
     }
 });
+
+// End of Game Function ------------------------------------------------------------
+function endGame (){
+
+  //hide timer and quizBlock
+  document.getElementById("quizBlock").style.display = "none";
+  document.getElementById('timerBlock').style.display = "none";
+
+  //show scoreBlock
+  document.getElementById('scoreBlock').style.display = "block";
+};
 // Quiz Function -------------------------------------------------------------------
 function startQuiz () {
-  document.getElementById("quizBlock").style.display = "block";
+  document.getElementById("quizBlock").style.display = "block"; // display quizBlock
+
+  
 };
 
 // Timer Function ------------------------------------------------------------------
