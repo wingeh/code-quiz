@@ -11,9 +11,9 @@
     <!--header section-->
     <header>
         <div id="title"><h1>Code Quizer</h1></div>
-        <div id="timer">
+        <div id="timerBlock">
             <p>TIME REMAINING:</p>
-            <div id="time-remaining"><p>00:00</p></div>
+            <div id="counter"><p>00:00</p></div>
         </div>
     </header>
 
@@ -25,12 +25,12 @@
         <div id="instructions">
             <h2 class="instructions">Instructions</h2>
             <p class="instructions">The instructions for this quiz will go here. This section will tell users how to interact with the gui and explain the scoring process, etc so this is some sample text so we can see what it will look like when it is all said and done.</p>
-        <input type="button" value="START QUIZ" onclick="launchQuiz()">
+        <input type="button" value="START QUIZ" id="startTimer">
         </div>
     </section>
 
         <!--question section-->
-    <section>
+    <section id="questionBlock">
         <div id="question" class="card">
             <h2>Question #</h2>
             <p><strong>Is this the section where the questions will be asked?</strong></p>
@@ -45,7 +45,7 @@
     </section>
 
     <!--score section-->
-    <section>
+    <section id="scoreBlock">
         <div id="score" class="card">
             <h2>Your Score</h2>
             <p class="score">XYZ</p>
