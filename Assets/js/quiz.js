@@ -33,17 +33,11 @@ function endGame (){
   document.getElementById('score').innerText = "You answered " + winCount + " of " + questions.length + " questions correctly.";
 };
 
-
-// Quiz Function -------------------------------------------------------------------
-//function startQuiz () {
-  
-  
-//};
-
 // Question Function ------------------------------------------------------------------------------
 
 function startQuiz() {
-  console.log ("startQuiz called")
+  let questionDisplay = questionCount+1
+  document.getElementById("questionNumber").innerText = "Question #" + questionDisplay;
   document.getElementById("quizBlock").style.display = "block"; // display quizBlock
 
 // event liseners  
@@ -89,10 +83,13 @@ var elem = document.getElementById('counter');
 // event listener
 startTimer.addEventListener("click", timer);
 
+
+
 var timeLeft = 30; // starting time in seconds
     
     
 function timer() {  
+  document.getElementById("startTimer").style.display = "none";
   startQuiz();
   var timerInterval = setInterval(function(){
     
@@ -153,3 +150,41 @@ var questions = [
 // Answers Array --------------------------------------------------------------------------
 
 var answers = ["Object", "if () {};", "||", "set"]
+
+//  Restart Quiz ----- --------------------------------------------------------------------
+
+var reset = document.getElementById("reset");
+reset.addEventListener("click", restartQuiz);
+
+function restartQuiz () {    
+  location.reload();
+};
+
+// Save Scores to Hall of Fame ------------------------------------------------------------
+
+var saveScore = document.getElementById("saveScore");
+saveScore.addEventListener("click", saveScoreFunction);
+
+function saveScoreFunction (event) {
+  //event.stopPropagation()
+
+  var savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
+    
+    var savedDataObject = {
+        initials: initials.value,
+        score: winCount,
+    };
+
+    savedScores.push(savedDataObject);
+    console.log(savedScores);
+    
+    
+    localStorage.setItem("savedScores", JSON.stringify(savedScores));
+
+    savedScores.forEach(element => {
+        liEl = document.createElement("li");
+        liEl.textContent = "Initials: " + element.initials + "   ||   Score: " + element.score;
+        leaderboard.appendChild(liEl);
+    });
+
+  };

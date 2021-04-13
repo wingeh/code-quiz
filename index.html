@@ -25,21 +25,21 @@
         <div id="instructions">
             <h2 class="instructions">Instructions</h2>
             <p class="instructions">The instructions for this quiz will go here. This section will tell users how to interact with the gui and explain the scoring process, etc so this is some sample text so we can see what it will look like when it is all said and done.</p>
-        <input type="button" value="START QUIZ" id="startTimer" />
+        <input type="button" value="START QUIZ" id="startTimer" class="instructions"/>
         </div>
     </section>
 
         <!--question section-->
     <section id="quizBlock">
         <div id="questionBox" class="card">
-            <div id="questionNumber"><h2>Question #</h2></div>
-            <div id="questionText"><p><strong>Is this the section where the questions will be asked?</strong></p></div>
+            <h2 id="questionNumber">Question #</h2>
+            <p id="questionText">Is this the section where the questions will be asked?</p>
         
         <div id="answers">
-            <input type="button" id="answer1" class="answer-button" value="A. This is the first answer." /></input>
-            <input type="button" id="answer2" class="answer-button" value="B. Answer the second." /></input>
-            <input type="button" id="answer3" class="answer-button" value="C. This is where the third one goes."/></input>
-            <input type="button" id="answer4" class="answer-button" value="D. Last, but not least!"/></input>
+            <input type="button" id="answer1" class="answer-button" class="answers" value="A. This is the first answer." /></input>
+            <input type="button" id="answer2" class="answer-button" class="answers" value="B. Answer the second." /></input>
+            <input type="button" id="answer3" class="answer-button" class="answers" value="C. This is where the third one goes."/></input>
+            <input type="button" id="answer4" class="answer-button" class="answers" value="D. Last, but not least!"/></input>
         </div>
         </div>
     </section>
@@ -54,7 +54,8 @@
             <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
             <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
             <input class="initials inputs" type="text" maxlength="1" placeholder="A" />
-            <input type="button" value="SAVE" class="save-button" id="save" />            
+            <input type="button" value="SAVE YOUR SCORE" class="save-button" id="saveScore" />
+            <input type="button" value="TRY AGAIN" id="reset" />            
         </div>
         <div id="highscore" class="card">
             <h2>Hall of Fame</h2>
